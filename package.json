@@ -1,0 +1,23 @@
+{
+  "name": "minicartojs",
+  "version": "1.0.0",
+  "description": "Engine test for Carto",
+  "main": "/lib/minicarto.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/javidalpe/minicartojs.git"
+  },
+  "keywords": [
+    "carto",
+    "js"
+  ],
+  "author": "Javier Vidal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/javidalpe/minicartojs/issues"
+  },
+  "homepage": "https://github.com/javidalpe/minicartojs#readme"
+}
