@@ -13,12 +13,20 @@ class Core {
     }
 
     configureApi(options) {
-        var url = options.maps_api_config.maps_api_template.replace("{user}", options.maps_api_config.user_name);
-        fetch(url, {
+        var urlTemplate = options.maps_api_config.maps_api_template.replace("{user}", options.maps_api_config.user_name);
+        var urlWithApi = urlTemplate + '/api/v1/map';
+
+        var body = {
+            layers: options.layers
+        };
+
+        fetch(urlWithApi, {
             method: "POST",
-            body: JSON.stringify(options),
-            contentType: 'application/json',
-            mode: 'no-cors',
+            body: JSON.stringify(body),
+            headers: {
+                'Accept': 'application/json, text/plain, */*',
+                'Content-Type': 'application/json'
+            },
         }).then((response) => response.json())
         .then((json) => {
             this.layergroupid = json.layergroupid;
